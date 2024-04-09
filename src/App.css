@@ -1,38 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  --box: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --shadow: #bababa85;
+  --invert: 0;
+  --inputColor: #000000;
+}
+
+[data-theme='dark'] {
+  --box: hsl(209, 23%, 22%);
+  --background: hsl(207, 26%, 17%);
+  --text: hsl(0, 0%, 100%);
+  --shadow: #171f27bf;
+  --invert: 1;
+  --inputColor: #fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::placeholder {
+  color: var(--inputColor);
+}
+
+main {
+  min-height: calc(100vh - 200px);
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: var(--background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.App-container {
+  max-width: 1300px;
+  width: 100%;
+  padding: 0 1%;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: var(--box);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+
+.btn-clean {
+  background: transparent;
+}
+
+.btn-shadow {
+  border-radius: 4px;
+  box-shadow: var(--shadow) 1px 1px 5px;
+}
+
+header {
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
+  background-color: var(--box);
+  box-shadow: var(--shadow) 0px 1px 2px;
 }
 
-.App-link {
-  color: #61dafb;
+header>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Filters {
+  width: 100%;
+  padding: 6px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Filters #search,
+.Filters select {
+  background-color: var(--box);
+  border: none;
+  border-radius: 5px;
+  width: 180px;
+  padding: 0px 25px;
+  height: 45px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow) 1px 1px 1px;
+}
+
+.Filters #search {
+  width: 280px;
+}
+
+
+option {
+  cursor: pointer;
+  border: none;
+}
+
+option:hover {
+  background-color: var(--box);
+}
+
+.cards {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 20px;
+}
+
+.card {
+  width: 24%;
+  min-width: 250px;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--box);
+  box-shadow: var(--shadow) 1px 1px 8px;
+
+}
+
+.card-img {
+  height: 155px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-body {
+  height: 190px;
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.card-body h2 {
+  margin-bottom: 10px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.util-link {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.util-link .btn {
+  width: 100px;
+  text-align: center;
+  height: 33px;
+
+  justify-content: center;
+}
+
+.util-link .btn img {
+  width: 23px;
+  filter: invert(var(--invert));
+}
+
+.icon {
+  width: 17px;
+  filter: invert(var(--invert));
+}
+
+.countryInfo {
+  display: flex;
+  column-gap: 1%;
+  width: 100%;
+}
+
+.countryInfo>div {
+  width: 50%;
+}
+
+.countryInfo-txt {
+  display: flex;
+  row-gap: 25px;
+  flex-direction: column;
+}
+
+.countryInfo img {
+  min-height: 250px;
+  width: 75%;
+}
+
+.countryInfo-txt-body {
+  display: flex;
+  width: 100%;
+  column-gap: 30px;
+}
+
+.countryInfo-txt-body>div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.countryInfo-txt-body p span {
+  font-weight: 100;
+}
+
+.countryInfo-txt-foot p {
+  display: inline-flex;
+  column-gap: 5px;
+  row-gap: 8px;
+  align-items: center;
+  flex-wrap: wrap
+}
+
+.countryInfo-txt-foot p * {
+  min-width: fit-content;
+}
+
+@media only screen and (max-width: 767px) {
+
+  .App-container {
+    padding: 0 4%;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .Filters {
+    flex-direction: column;
+    row-gap: 15px;
+    height: 120px;
+    row-gap: 7px;
+    justify-content: center;
+
+  }
+
+  .Filters>div {
+    width: 100%;
+  }
+
+  .cards {
+    justify-content: center;
+  }
+
+  .countryInfo,
+  .countryInfo-txt-body {
+    flex-direction: column;
+  }
+
+  .countryInfo {
+    padding: 0px 18px;
+    padding-bottom: 15px;
+  }
+
+  .countryInfo img {
+    width: 100%;
+  }
+
+  .countryInfo>div {
+    width: 100%;
+  }
+
+  .countryInfo-txt {
+    padding-top: 15px;
+  }
+
+  .countryInfo-txt-body {
+    row-gap: 25px;
+  }
+
+  .countryInfo-txt-foot p span {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  .cards {
+    justify-content: center;
   }
 }
