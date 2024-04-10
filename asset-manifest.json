@@ -1,18 +1,16 @@
 {
   "files": {
     "main.css": "/countries-info-page/static/css/main.39974cc7.css",
-    "main.js": "/countries-info-page/static/js/main.83dce268.js",
-    "static/js/453.62f49430.chunk.js": "/countries-info-page/static/js/453.62f49430.chunk.js",
+    "main.js": "/countries-info-page/static/js/main.93af7f65.js",
     "index.html": "/countries-info-page/index.html",
     "static/media/brightness.svg": "/countries-info-page/static/media/brightness.7c52edc5e4fdd5a12f404a155819f08c.svg",
     "static/media/moon.svg": "/countries-info-page/static/media/moon.6eed1a149a70bb07d3ebce13690612c6.svg",
     "static/media/arrow-small-left.svg": "/countries-info-page/static/media/arrow-small-left.ca2a91258815109dc56590718fe535c8.svg",
     "main.39974cc7.css.map": "/countries-info-page/static/css/main.39974cc7.css.map",
-    "main.83dce268.js.map": "/countries-info-page/static/js/main.83dce268.js.map",
-    "453.62f49430.chunk.js.map": "/countries-info-page/static/js/453.62f49430.chunk.js.map"
+    "main.93af7f65.js.map": "/countries-info-page/static/js/main.93af7f65.js.map"
   },
   "entrypoints": [
     "static/css/main.39974cc7.css",
-    "static/js/main.83dce268.js"
+    "static/js/main.93af7f65.js"
   ]
 }
