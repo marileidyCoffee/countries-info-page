@@ -4,7 +4,6 @@ import Header from "./components/Header"
 import Home from "./pages/Home"
 import Country from './pages/Country';
 import NotFound from "./pages/NotFound";
-// import RedirectPage from './pages/RedirectPage'
 import "./App.css"
 
 
@@ -19,7 +18,7 @@ function App() {
     <div className="App" data-theme={theme}>
         <Header theme={theme} onThemeChange={handleThemeChange} />
       <div className="App-container">
-        <Routes>
+      <Routes>
           <Route path="/" element={ <Home /> } />
           <Route path="/country/:name" element={ <Country /> } />
           <Route path="*" element={ <NotFound /> } />
